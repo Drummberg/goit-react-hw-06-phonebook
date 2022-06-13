@@ -1,20 +1,31 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { add, getContacts } from '../Redux/contactSlice';
+import { add, getContacts } from '../Redux/contatcsSlice';
 import { nanoid } from 'nanoid';
 import { Form, Label, Input, Button } from './ContactForm.styled';
 
-export default function ContactForm({ onSubmit }) {
-   const contacts = useSelector(getContacts);
-   const dispatch = useDispatch();
+export default function ContactForm() {
+  const contacts = useSelector(getContacts);
+  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+
+  const onSubmit = (formValue) => {
+        if (contacts.find(contact => contact.name === formValue.name)) {
+            return alert(`${formValue.name} вже є в списку контактів`);
+        }
+        let id = nanoid();
+        dispatch(add({...formValue, id}));
+    }
+
 
   const handleSubmit = event => {
     event.preventDefault();
     onSubmit({ name: name, number: number });
     reset();
   };
+
+
 
   const reset = () => {
     setName('');
