@@ -12,8 +12,7 @@ export default function Filter() {
   };
 
   return (
-    <Label>
-      Find contacts by name
+    <Label>Find contacts by name
       <Input type="text" name="filter" value={name} onChange={handleFilter} />
     </Label>
   );

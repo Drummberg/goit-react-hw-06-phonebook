@@ -3,13 +3,23 @@ import styled from 'styled-components';
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
-  margin-bottom: 5px;
+  margin-left: 10px;
   font-weight: 500;
   font-size: 20px;
-  width: 250px;
 `;
 
 export const Input = styled.input`
-  width: 200px;
-  margin-top: 2px;
+ position: relative;
+  font-size: 14px;
+  background: #ffffff;
+  border-radius: 5px;
+  line-height: 25px;
+  height: 25px;
+  width: 250px;
+  padding: 0 10px;
+  border: 1px solid #cacaca;
+  margin-top: 5px;
+  &:active {
+    box-shadow: rgb(155, 25, 233);
+  }
 `;

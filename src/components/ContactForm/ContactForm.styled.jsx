@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const Form = styled.form`
   width: 320px;
   padding: 10px;
-  border: 1px solid black;
-`;
+  `;
 
 export const Input = styled.input`
   position: relative;
@@ -25,12 +24,13 @@ export const Input = styled.input`
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
-  margin-bottom: 5px;
+  margin: 0 0 5px 25px;
   font-weight: 500;
   font-size: 20px;
 `;
 
 export const Button = styled.button`
+  margin-left: 80px; 
   cursor: pointer;
   border-radius: 5px;
   &:active {
