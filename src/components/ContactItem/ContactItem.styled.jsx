@@ -14,9 +14,10 @@ export const Button = styled.button`
   cursor: pointer;
   border-radius: 5px;
   height: 25px;
-  border: 1px solid #cacaca;
-
+  border: 1px solid #black;
+  background-color: transparent;
   &:active {
-    background-color: rgb(75, 75, 193);
+    background-color: rgb(234, 41, 12);
+    color: white;
   }
 `;

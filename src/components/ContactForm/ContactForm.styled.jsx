@@ -31,9 +31,18 @@ export const Label = styled.label`
 
 export const Button = styled.button`
   margin-left: 80px; 
+  font-size: 16px;
+  width: 130px;
+  height: 30px;
+  background-color: transparent;
   cursor: pointer;
   border-radius: 5px;
   &:active {
     background-color: rgb(75, 75, 193);
+  }
+  &:hover {
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
   }
 `;
